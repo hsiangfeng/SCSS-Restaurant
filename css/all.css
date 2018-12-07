@@ -1,0 +1,1411 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #EFE9E7;
+}
+
+.wrap-fluid {
+  max-width: 100%;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 960px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 376px) {
+  .wrap {
+    padding: 0 0;
+  }
+}
+
+.bg-banner {
+  background-color: #000000;
+}
+
+.bg-banner .banner {
+  position: relative;
+  height: 420px;
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_desktop@2x.png);
+  background-color: #000000;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg-banner .banner {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_desktop.png);
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-banner .banner {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_mobile.png);
+  }
+}
+
+.bg-banner .banner-text {
+  position: absolute;
+  top: 35%;
+  left: 26%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 460px;
+  height: 152px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bg-banner .banner-text h3 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.bg-banner .banner-text h3 br {
+  display: none;
+}
+
+@media (max-width: 376px) {
+  .bg-banner .banner-text h3 br {
+    text-align: center;
+    display: block;
+  }
+}
+
+.bg-banner .banner-text h5 {
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .bg-banner .banner-text {
+    left: 21%;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-banner .banner-text {
+    left: 11%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 376px) {
+  .bg-banner .banner-text {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.logo {
+  margin-left: 30px;
+  width: 120px;
+  height: 24px;
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/logo_w@svg.svg);
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.open .topmain-content,
+.open .topmain-content .main {
+  background-color: #000000;
+}
+
+.topmain {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.topmain .topmain-content {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topmain .topmain-content .main li {
+  display: inline-block;
+  padding-right: 20px;
+  height: 56px;
+  line-height: 56px;
+}
+
+.topmain .topmain-content .main li a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.topmain .topmain-content .main li a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #3d1101;
+  content: "";
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.topmain .topmain-content .main li a:hover::after {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .topmain .topmain-content .main {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .topmain .topmain-content .main li {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-right: 0;
+  }
+  .topmain .topmain-content .main li a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.m-menu {
+  line-height: 60px;
+  display: none;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .m-menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+  }
+}
+
+.m-topmain {
+  width: 270px;
+  height: 100%;
+}
+
+.action {
+  display: block;
+}
+
+.footer {
+  height: 200px;
+  background-color: #efe9e7;
+}
+
+.footer .wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .footer .wrap {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.footer .connection ul {
+  list-style: disc;
+  line-height: 26px;
+}
+
+@media (max-width: 576px) {
+  .footer .connection ul {
+    padding: 20px;
+  }
+}
+
+.footer .about, .footer .connection {
+  max-width: 299px;
+  color: #3d1101;
+}
+
+.footer .about h3, .footer .connection h3 {
+  margin-bottom: 20px;
+  color: #3d1101;
+  font-size: 26px;
+}
+
+@media (max-width: 768px) {
+  .footer .about, .footer .connection {
+    width: 31.33333%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .about, .footer .connection {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.footer-logo {
+  text-align: right;
+}
+
+.fa-google-plus-square {
+  color: #dc3545;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fa-google-plus-square:hover {
+  color: #e83e8c;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fa-twitter-square {
+  color: #007bff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fa-twitter-squarehover {
+  color: #007bff;
+}
+
+.fa-facebook-square {
+  color: #3a5795;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fa-facebook-squarehove {
+  color: #007bff;
+}
+
+.chef-section, .contact, #secret {
+  padding-top: 60px;
+}
+
+.feature-img-1 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1@2x.png);
+}
+
+@media (max-width: 768px) {
+  .feature-img-1 {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1.png);
+  }
+}
+
+.feature-img-2 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2@2x.png);
+}
+
+@media (max-width: 768px) {
+  .feature-img-2 {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2.png);
+  }
+}
+
+.feature-img-3 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3@2x.png);
+}
+
+@media (max-width: 768px) {
+  .feature-img-3 {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3.png);
+  }
+}
+
+.secret-h2, .client-h2, .contact-h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #3d1101;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50%;
+  line-height: 30px;
+  margin: 25px auto;
+}
+
+.secret-h2::before, .secret-h2::after, .client-h2::before, .client-h2::after, .contact-h2::before, .contact-h2::after {
+  border-top: 1px solid #979797;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  content: "";
+  margin: 0 1rem;
+}
+
+@media (max-width: 576px) {
+  .secret-h2::before, .secret-h2::after, .client-h2::before, .client-h2::after, .contact-h2::before, .contact-h2::after {
+    display: none;
+  }
+}
+
+.secret ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto;
+}
+
+.secret ul li {
+  width: 31.3333%;
+  height: 410px;
+  padding: 20px;
+  text-align: center;
+  color: #3d1101;
+}
+
+.secret ul li h3 {
+  font-size: 18px;
+  margin: 20px auto;
+}
+
+.secret ul li p {
+  text-align: left;
+  font-size: 16px;
+}
+
+.secret ul li img {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  .secret ul li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .secret ul {
+    display: block;
+    text-align: center;
+  }
+}
+
+.secret:after::before, .secret:after::after {
+  display: block;
+  content: "";
+}
+
+.secret:after:after {
+  clear: both;
+}
+
+.chef {
+  background-color: #3d1101;
+}
+
+.chef-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 460px;
+}
+
+@media (max-width: 576px) {
+  .chef-content {
+    height: 100%;
+    display: block;
+  }
+}
+
+.chefImg {
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/main_chef_brown.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .chefImg {
+    width: 100%;
+    height: 460px;
+  }
+}
+
+.chefResume {
+  padding: 20px;
+  color: #ffffff;
+  width: 50%;
+}
+
+.chefResume h3 {
+  font-size: 20px;
+}
+
+.chefResume p {
+  margin: 10px auto;
+}
+
+@media (max-width: 576px) {
+  .chefResume {
+    width: 100%;
+  }
+}
+
+.client {
+  margin: 50px auto;
+}
+
+.client ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3d1101;
+}
+
+@media (max-width: 576px) {
+  .client ul {
+    display: block;
+  }
+}
+
+.client-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3d1101;
+}
+
+.client-header img {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+}
+
+.client-header h6 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.client-body {
+  margin-left: 20%;
+  padding: 10px;
+}
+
+.client-footer {
+  text-align: right;
+  color: rgba(61, 17, 0, 0.75);
+}
+
+.contact {
+  background-color: #fafafa;
+}
+
+.contact .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 576px) {
+  .contact .wrap {
+    display: block;
+  }
+}
+
+.contact label {
+  font-size: 14px;
+  display: block;
+  color: #3d1101;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contact-map img {
+  word-wrap: 460px;
+}
+
+.map-Img {
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map@2x.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 460px;
+  height: 368px;
+}
+
+@media (max-width: 768px) {
+  .map-Img {
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map.png);
+    width: 363px;
+    height: 386px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-Img {
+    width: 100%;
+  }
+}
+
+.contact-form {
+  width: 50%;
+  padding: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form input[type="number"] {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.contact-form .input-btn {
+  text-align: right;
+}
+
+.contact-form .input-btn input[type="submit"],
+.contact-form .input-btn input[type="reset"] {
+  color: #ffffff;
+  border-radius: 5px;
+  width: 70px;
+  height: 40px;
+  background-color: #cccccc;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact-form .input-btn input[type="submit"] {
+  background-color: #fd7e14;
+}
+
+.contact-form .input-btn input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #fd7e14;
+  border: 2px solid #fd7e14;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="number"]:focus,
+.contact-form input[type="password"]:focus,
+.contact-form input[type="submit"]:focus,
+.contact-form input[type="reset"]:focus,
+.contact-form input[type="search"]:focus {
+  -webkit-box-shadow: 0px 0px 10px #007bff;
+          box-shadow: 0px 0px 10px #007bff;
+}
+
+.contact-form .input-radio h6 {
+  font-size: 14px;
+  display: block;
+  color: #3d1101;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contact-form .input-radio label {
+  display: inline;
+}
+
+@media (max-width: 576px) {
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.cart {
+  margin: 2% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .cart {
+    display: block;
+  }
+}
+
+.cart-main {
+  width: 25%;
+  margin-right: 20px;
+}
+
+.cart-main h3 {
+  font-size: 20px;
+  color: #3d1101;
+  margin-bottom: 20px;
+}
+
+.cart-main li a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #3d1101;
+  text-decoration: none;
+  color: #3d1101;
+}
+
+.cart-main li a:hover, .cart-main li a.active {
+  background-color: #3d1101;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cart-main li a {
+    height: 44px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-main {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.cart-commodity {
+  width: 75%;
+}
+
+.cart-commodity .cart-topmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-commodity .cart-topmain .seach-group {
+  position: relative;
+}
+
+.cart-commodity .cart-topmain .seach-group input[type="search"] {
+  height: 32px;
+  width: 460px;
+  border: 3px solid #3d1101;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .cart-commodity .cart-topmain .seach-group input[type="search"] {
+    width: 331px;
+    height: 44px;
+  }
+}
+
+.cart-commodity .cart-topmain .btn-search {
+  position: absolute;
+  right: 0;
+  width: 36px;
+  height: 32px;
+  background-color: #3d1101;
+  color: #ffffff;
+  cursor: pointer;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .cart-commodity .cart-topmain .btn-search {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.cart-commodity .cart-topmain .btn-cart {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+}
+
+.cart-commodity .cart-topmain .btn-cart .fa-shopping-cart {
+  color: #3d1101;
+  font-size: 30px;
+}
+
+.cart-commodity .cart-topmain .cart-icon a {
+  text-decoration: none;
+  color: #3d1101;
+  border-right: 1px solid #3d1101;
+  padding-right: 20px;
+}
+
+@media (max-width: 376px) {
+  .cart-commodity .cart-topmain .cart-icon {
+    margin: 20px 0;
+    text-align: right;
+  }
+}
+
+.cart-commodity .cart-topmain .cart-number {
+  position: absolute;
+  top: -7px;
+  right: 3px;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: #fd7e14;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+@media (max-width: 376px) {
+  .cart-commodity .cart-topmain {
+    display: block;
+  }
+}
+
+.cart-commodity .product {
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  color: #3d1101;
+  width: 32%;
+  margin: 10px 3px;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+          box-shadow: 2px 2px 10px #000000;
+}
+
+.cart-commodity .product .product-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.cart-commodity .product .product-header img {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.cart-commodity .product .product-header img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.cart-commodity .product .product-header .product-img-title .fa-heart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.cart-commodity .product .product-header .product-img-title .fa-heart:hover {
+  color: #fd7e14;
+}
+
+.cart-commodity .product .product-header .product-img-title .product-hot {
+  position: absolute;
+  top: 18%;
+  right: -84px;
+  font-size: 16px;
+  width: 100%;
+  height: 25px;
+  color: #ffffff;
+  -webkit-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+  background-color: #007bff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .cart-commodity .product .product-header .product-img-title .product-hot {
+    right: -97px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-commodity .product .product-header .product-img-title .product-hot {
+    right: -216px;
+    height: 44px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 376px) {
+  .cart-commodity .product .product-header .product-img-title .product-hot {
+    right: -144px;
+    height: 39px;
+    font-size: 20px;
+  }
+}
+
+.cart-commodity .product .product-body {
+  padding: 5px;
+}
+
+.cart-commodity .product .product-body h3 {
+  font-size: 20px;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+
+.cart-commodity .product .product-body p {
+  font-size: 14px;
+  margin-bottom: 5%;
+}
+
+.cart-commodity .product .product-body .product-money {
+  border-top: 1px solid #3d1101;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  width: 50%;
+}
+
+.cart-commodity .product .product-footer {
+  padding: 10px;
+}
+
+.cart-commodity .product .product-footer a {
+  display: inline-block;
+  line-height: 28px;
+  width: 100%;
+  border: 2px solid #fd7e14;
+  color: #fd7e14;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.cart-commodity .product .product-footer a:hover {
+  letter-spacing: 4px;
+  background-color: #3d1101;
+  border: 2px solid #3d1101;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cart-commodity .product .product-footer a {
+    height: 44px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-commodity .product .product-footer a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-commodity .product {
+    width: 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-commodity .product {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-commodity {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+/* cart end */
+.login {
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login .login-img {
+  background-image: url(https://hsiangfeng.github.io/Restaurant/img/logo_l@svg.svg);
+  width: 240px;
+  height: 48px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login .login-text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3d1101;
+}
+
+.login .login-form {
+  width: 300px;
+  -webkit-box-shadow: 1px 1px 10px #000000;
+          box-shadow: 1px 1px 10px #000000;
+}
+
+.login .login-form .form-header {
+  border-top: 3px solid #fd7e14;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3d1101;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login .login-form .form-groud {
+  padding: 10px;
+}
+
+.login .login-form .form-groud .form-account,
+.login .login-form .form-groud .form-password {
+  position: relative;
+}
+
+.login .login-form .form-groud .form-account label,
+.login .login-form .form-groud .form-password label {
+  display: block;
+  font-size: 16px;
+  color: #3d1101;
+}
+
+.login .login-form .form-groud .form-account input[type="text"],
+.login .login-form .form-groud .form-password input[type="text"] {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px;
+  padding-left: 40px;
+}
+
+.login .login-form .form-groud .form-account input[type="password"],
+.login .login-form .form-groud .form-password input[type="password"] {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px;
+  padding-left: 40px;
+}
+
+.login .login-form .form-groud .form-btn {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .login-form .form-groud .form-btn .login-btn {
+  width: 125px;
+  height: 32px;
+  background-color: #fd7e14;
+  color: #ffffff;
+  border: 0;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.login .login-form .form-groud .form-btn .login-btn:hover {
+  border: 1px solid #3d1101;
+  background-color: #3d1101;
+  color: #ffffff;
+}
+
+.login .login-form .form-groud .form-btn .register-btn {
+  display: inline-block;
+  background-color: #6c757d;
+  color: #ffffff;
+  text-align: center;
+  width: 125px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login .login-form .form-groud .form-btn .register-btn:hover {
+  border: 1px solid #fd7e14;
+  background-color: #EFE9E7;
+  color: #fd7e14;
+}
+
+.login .login-form .form-groud .forget {
+  font-size: 14px;
+  color: #fd7e14;
+  text-decoration: none;
+}
+
+.login .register {
+  max-width: 620px;
+  -webkit-box-shadow: 1px 1px 10px #000000;
+          box-shadow: 1px 1px 10px #000000;
+}
+
+.login .register .form-header {
+  border-top: 3px solid #fd7e14;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3d1101;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login .register .form-groud {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .register .form-groud .form-contract {
+  width: 50%;
+  color: #3d1101;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .login .register .form-groud .form-contract {
+    width: 100%;
+  }
+}
+
+.login .register .form-groud .form-groud-input .register-account,
+.login .register .form-groud .form-groud-input .register-password,
+.login .register .form-groud .form-groud-input .register-re-password {
+  position: relative;
+}
+
+.login .register .form-groud .form-groud-input .register-account label,
+.login .register .form-groud .form-groud-input .register-password label,
+.login .register .form-groud .form-groud-input .register-re-password label {
+  font-size: 16px;
+  color: #3d1101;
+}
+
+.login .register .form-groud .form-groud-input .register-account input[type="text"],
+.login .register .form-groud .form-groud-input .register-password input[type="text"],
+.login .register .form-groud .form-groud-input .register-re-password input[type="text"] {
+  margin-bottom: 15px;
+  padding-left: 40px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px;
+  padding-left: 40px;
+}
+
+.login .register .form-groud .form-groud-input .register-account input[type="password"],
+.login .register .form-groud .form-groud-input .register-password input[type="password"],
+.login .register .form-groud .form-groud-input .register-re-password input[type="password"] {
+  margin-bottom: 15px;
+  padding-left: 40px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px;
+  padding-left: 40px;
+}
+
+.login .register .form-groud .form-groud-input .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 20px;
+}
+
+.login .register .form-groud .form-groud-input .form-btn .register-btn {
+  display: inline-block;
+  background-color: #6c757d;
+  color: #ffffff;
+  text-align: center;
+  width: 125px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login .register .form-groud .form-groud-input .form-btn .register-btn:hover {
+  border: 1px solid #fd7e14;
+  background-color: #EFE9E7;
+  color: #fd7e14;
+}
+
+.login .register .form-groud .form-groud-input .login-btn {
+  font-size: 14px;
+  color: #fd7e14;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .login .register .form-groud {
+    display: block;
+  }
+}
+
+.login .fa-envelope {
+  position: absolute;
+  top: 39%;
+  left: 10px;
+}
+
+.login .fa-key {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+}
+
+.login input[type="text"]:focus,
+.login input[type="tel"]:focus,
+.login input[type="email"]:focus,
+.login input[type="number"]:focus,
+.login input[type="password"]:focus,
+.login input[type="submit"]:focus,
+.login input[type="reset"]:focus,
+.login input[type="search"]:focus {
+  -webkit-box-shadow: 0px 0px 10px #007bff;
+          box-shadow: 0px 0px 10px #007bff;
+}
+/*# sourceMappingURL=all.css.map */

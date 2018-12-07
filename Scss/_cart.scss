@@ -1,0 +1,231 @@
+@import "mixin";
+@import "variable";
+@import "grid";
+.cart{
+    margin: 2% auto;
+    @include flex-justify-center;
+    @include moblie576(){
+        display: block;
+    }
+}
+.cart-main{
+    width: 25%;
+    margin-right: 20px;
+    h3{
+        font-size: 20px;
+        color:$hex-red;
+        margin-bottom: 20px;
+    }
+    li{
+        a{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid $hex-red;
+            text-decoration: none;
+            color:$hex-red;
+            &:hover,
+            &.active{
+                background-color: $hex-red;
+                color:$white;
+            }
+            @include pad(){
+                height: 44px;
+                line-height: 24px;
+            }
+        }
+    }
+    @include moblie576(){
+        width: 100%;
+        margin-top:50px;
+    }
+}
+.cart-commodity{
+    width: 75%;
+    .cart-topmain{
+        @include flex-justify-sb;
+        .seach-group{
+            position: relative;
+            input[type="search"]{
+                height: 32px;
+                width: 460px;
+                border: 3px solid $hex-red;
+                padding: 10px;
+            }
+            @include pad(){
+                input[type="search"]{
+                    width:331px;
+                    height: 44px;
+                }
+            }
+        }
+        .btn-search{
+            position: absolute;
+            right:0;
+            width: 36px;
+            height: 32px;
+            background-color: $hex-red;
+            color:$white;
+            cursor: pointer;
+            border: 0;
+            @include pad(){
+                height: 44px;
+                width: 44px;
+            }
+        }
+        .btn-cart{
+            position: relative;
+            border: 0;
+            cursor: pointer;
+            .fa-shopping-cart{
+                color:$hex-red;
+                font-size: $font-size-md +14;
+            }
+        }
+        .cart-icon{
+            a{
+                text-decoration: none;
+                color:$hex-red;
+                border-right: 1px solid $hex-red;
+                padding-right:20px; 
+
+            }
+            @include iphone6(){
+                margin:20px 0;
+                text-align: right;
+            }
+        }
+        .cart-number{
+            position: absolute;
+            top: -7px;
+            right: 3px;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            background-color: $orange;
+            color:$white;
+            border-radius: 50%;
+        }
+        @include iphone6(){
+            display: block;
+        }
+    }
+    .product{
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        color:$hex-red;
+        width: 32%;
+        margin: 10px 3px;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px $block;
+        .product-header{
+            position: relative;
+            overflow: hidden;
+            img{
+                transition-duration: 1s;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+            .product-img-title{
+                .fa-heart{
+                    position: absolute;
+                    top:10px;
+                    left:10px;
+                    font-size: $font-size-md + 4;
+                    color:$white;
+                    transition:all 0.3s;
+                    &:hover{
+                        color:$orange;
+                    }
+                }
+                .product-hot{
+                    position: absolute;
+                    top: 18%;
+                    right: -84px; 
+                    font-size: 16px;
+                    width: 100%;
+                    height: 25px;
+                    color:$white;
+                    transform: rotate(-315deg);
+                    background-color: $blue;
+                    @include flex-center;
+                    @include pad(){
+                        right: -97px;
+                    }
+                    @include moblie576(){
+                        right:-216px;
+                        height: 44px;
+                        font-size: 24px;
+                    }
+                    @include iphone6(){
+                        right: -144px;
+                        height: 39px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .product-body{
+            padding: 5px;
+            h3{
+                font-size: $font-size-md +4;
+                margin-bottom: 5%;
+                font-weight: $font-bold;
+            }
+            p{
+                font-size: $font-size-sm;
+                margin-bottom: 5%;
+            }
+            .product-money{
+                border-top: 1px solid $hex-red;
+                margin: 0 auto;
+                padding-top: 30px;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: $font-bold;
+                width: 50%;
+            }
+        }
+        .product-footer{
+            padding:10px;
+            a{
+                display: inline-block;
+                line-height: 28px;
+                width: 100%;
+                border:2px solid $orange;
+                color:$orange;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: $font-bold;
+                transition: all 0.8s;
+                &:hover{
+                    letter-spacing: 4px;
+                    background-color: $hex-red;
+                    border:2px solid $hex-red;
+                    color:$white;
+                }
+                @include pad(){
+                    height: 44px;
+                    line-height: 44px;
+                }
+                @include moblie576(){
+                    width: 100%;
+                }
+            }
+        }
+        @include pad(){
+            width: 48%;
+        }
+        @include moblie576(){
+            width: 100%;
+        }
+    }
+    @include moblie576(){
+        margin-top:50px;
+        width: 100%;
+    }
+}
+
+/* cart end */

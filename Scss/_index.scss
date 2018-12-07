@@ -1,0 +1,238 @@
+@import "mixin";
+@import "variable";
+@import "grid";
+// secret
+.feature-img-1{
+    @include round-img-200;
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1@2x.png);
+    @include pad(){
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1.png);
+    }
+}
+.feature-img-2{
+    @include round-img-200;
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2@2x.png);
+    @include pad(){
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2.png);
+    }
+}
+.feature-img-3{
+    @include round-img-200;
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3@2x.png);
+    @include pad(){
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3.png);
+    }
+}
+.secret-h2,.client-h2,.contact-h2{
+    @include flex-center;
+    text-align: center;
+    color:$hex-red;
+    font-size:$font-size-md + 4;
+    font-weight: $font-bold;
+    width: 50%;
+    line-height: 30px;
+    margin: 25px auto;
+    @include border-line;
+    @include moblie576(){
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+}
+.secret{
+    ul{
+        @include flex-center;
+        margin: 50px auto;
+        li{
+            width: 31.3333%;
+            height: 410px;
+            padding: 20px;
+            text-align: center;
+            color:$hex-red;
+            h3{
+                font-size: 18px;
+                margin:20px auto;
+            }
+            p{
+                text-align: left;
+                font-size: 16px;
+            }
+            img{
+                @include round-img-200;
+            }
+            @include moblie576{
+                width: 100%
+            }
+        }
+        @include moblie576{
+            display: block;
+            text-align: center;
+        }
+    }
+    &:after{
+        @include clearfix;
+    }
+}
+// secret end
+// chef
+.chef{
+    background-color: $hex-red;
+}
+.chef-content{
+    @include flex-center;
+    height: 460px;
+    @include moblie576(){
+        height: 100%;
+        display: block;
+    }
+}
+.chefImg{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/main_chef_brown.png);
+    @include bg-cover;
+    width: 50%;
+    height: 100%;
+    @include moblie576(){
+        width: 100%;
+        height: 460px;
+    }
+}
+.chefResume{
+    padding: 20px;
+    color:$white;
+    width: 50%;
+    h3{
+        font-size: $font-size-md+4;
+    }
+    p{
+        margin: 10px auto;
+    }
+    @include moblie576(){
+        width: 100%;
+    }
+}
+// chef end
+// client
+.client{
+    margin: 50px auto;
+    ul{
+        @include flex-align-center;
+        color:$hex-red;
+        @include moblie576(){
+            display: block;
+        }
+    }
+}
+.client-header{
+    @include flex-align-center;
+    color:$hex-red;
+    img{
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;
+    }
+    h6{
+        margin-left: 10px;
+        font-weight: $font-bold;
+    }
+}
+.client-body{
+    margin-left: 20%;
+    padding: 10px;
+}
+.client-footer{
+    text-align: right;
+    color: rgba(61,17,0,0.75);
+}
+// client end
+// contact
+.contact{
+    background-color: #fafafa;
+    .wrap{
+        @include flex-center;
+        padding-bottom: 50px;
+        @include moblie576(){
+            display: block;
+        }
+    }
+    label{
+        font-size: $font-size-sm;
+        display: block;
+        color:$hex-red;
+        font-weight: $font-bold;
+        margin-top:10px;
+        margin-bottom:5px;
+    }
+}
+.contact-map img{
+    word-wrap: 460px;
+}
+.map-Img{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map@2x.png);
+    @include bg-cover;
+    width: 460px;
+    height: 368px;
+    @include pad(){
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map.png);
+        width: 363px;
+        height: 386px;
+    }
+    @include moblie576(){
+        width: 100%;
+    }
+}
+.contact-form{
+    width: 50%;
+    padding: 20px;
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"],{
+        width: 100%;
+        height: 32px;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        padding: 6px;
+    }
+    .input-btn{
+        text-align: right;
+    }
+    .input-btn input[type="submit"],
+    .input-btn input[type="reset"]{
+        color:$white;
+        border-radius: 5px;
+        width: 70px;
+        height: 40px;
+        background-color: #cccccc;
+        border:0;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    .input-btn input[type="submit"]{
+        background-color: $orange;
+    }
+    .input-btn input[type="submit"]:hover{
+        background-color: $white;
+        color:$orange;
+        border: 2px solid $orange;
+    }
+    @include input-focus;
+    .input-radio{
+        h6{
+            font-size: $font-size-sm;
+            display: block;
+            color:$hex-red;
+            font-weight: $font-bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        label{
+            display: inline;
+        }
+    }
+    @include moblie576(){
+        width: 100%;
+    }
+}
+// contact end

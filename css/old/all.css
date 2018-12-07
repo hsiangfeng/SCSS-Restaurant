@@ -1,0 +1,995 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+body{
+    line-height: 1;
+}
+ol, ul{
+    list-style: none;
+}
+blockquote, q{
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content: "";
+    content: none;
+}
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* css reset end */
+:root{
+    /* bs4 root */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --block:#000000;
+    --hex-red:#3D1101;
+    --facebook:#3A5795;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* bs4 root end */
+    --rgba-block-75: 0,0,0,0.75;
+    --rgba-block-35: 0,0,0,0.75;
+}
+/* layout */
+body{
+    font-family: var(--font-family-monospace);
+    background-color: #EFE9E7;
+}
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+}
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wrap-fluid{
+    width: 100%;
+    
+}
+.banner{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_desktop@2x.png);
+    background-position: center center;
+    background-color: var(--block);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 420px;
+    position: relative;
+}
+.bg-banner{
+    background-color: var(--block);
+}
+.logo{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/logo_w@svg.svg);
+    margin-left: 30px;
+    width: 120px;
+    height: 24px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.topmain .main li{
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    padding-right: 20px;
+    
+}
+.topmain .main li a{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color:var(--white);
+    font-size: 16px;
+    transition: all 1s;
+    position: relative;
+    overflow: hidden;
+    
+}
+.topmain .main li a::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-bottom:3px solid var(--red);
+    transform: translateY(4px);
+    transition-duration: 0.3s;
+}
+.topmain .main li a:hover::after{
+    transform: translateY(-4px);
+}
+/*在PC上隱藏漢堡選單*/
+.m-menu{
+    display: none;
+    color:var(--white);
+}
+.m-topmain{
+    width: 270px;
+    height: 100%;
+}
+.d-none{
+    display: none;
+}
+.active{
+    display: block;
+}
+.topmain{
+    position: fixed;
+    right:0;
+    left: 0;
+    background-color: rgba(var(--rgba-block-75));
+    z-index: 30;
+}
+.topmain .topmain-content{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-text{
+    position: absolute;
+    left: 26%;
+    top: 35%;
+    width: 460px;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(var(--rgba-block-35));
+    color:var(--white);
+}
+.banner-text h3{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.banner-text br{
+    display: none;
+}
+.banner-text h5{
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+}
+.footer{
+    background-color: #EFE9E7;
+    height: 200px;
+}
+.footer .wrap{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .about,
+.footer .connection{
+    max-width: 299px;
+    color: var(--hex-red);
+}
+.footer .about h3, 
+.footer .connection h3{
+    font-size: 24px;
+    color: var(--hex-red);
+    margin-bottom: 20px;
+}
+.footer .connection ul{
+    list-style: disc;
+    line-height: 26px;
+}
+.footer-logo{
+    text-align: right;
+}
+.fa-google-plus-square{
+    color: var(--red);
+    transition:all 0.3s;
+}
+.fa-google-plus-square:hover{
+    color: var(--pink);
+    transition:all 0.3s;
+}
+.fa-twitter-square{
+    color: var(--blue);
+    transition:all 0.3s;
+}
+.fa-twitter-square:hover{
+    color: var(--info);
+}
+.fa-facebook-square{
+    color: var(--facebook);
+}
+.fa-facebook-square:hover{
+    color: var(--blue);
+}
+.chef-section,.contact,#secret{
+    padding-top: 60px;
+}
+/* layout end */
+/* secret */
+.feature-img-1{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1@2x.png);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.feature-img-2{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2@2x.png);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.feature-img-3{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3@2x.png);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.secret-h2,.client-h2,.contact-h2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color:var(--hex-red);
+    font-weight: bold;
+    width: 50%;
+    line-height: 30px;
+    margin: 25px auto;
+}
+.secret-h2::after,.client-h2::after,.contact-h2::after{
+    border-top: 1px solid #979797;
+    flex:1;
+    content: "";
+    margin: 0 1rem;
+}
+.secret-h2::before,.client-h2::before,.contact-h2::before{
+    border-top: 1px solid #979797;
+    flex:1;
+    content: "";
+    margin: 0 1rem;
+}
+.secret ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:50px auto;
+}
+.secret ul li{
+    width: 31.3333%;
+    height: 410px;
+    padding: 20px;
+    text-align: center;
+    color:var(--hex-red);
+}
+.secret ul li h3{
+    font-size: 18px;
+    margin:20px auto;
+}
+
+.secret ul li p{
+    text-align: left;
+    font-size: 16px;
+}
+.secret ul::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.secret ul li img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+/* secret end */
+/* chef */
+.chef{
+    background-color: var(--hex-red);
+}
+.chef-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 460px;
+}
+.chefImg{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/main_chef_brown@2x.png);
+    background-position: center center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+.chefResume{
+    padding: 20px;
+    color:var(--white);
+    width: 50%;
+}
+.chefResume h3{
+    font-size: 20px;
+}
+.chefResume p{
+    margin: 10px auto; 
+}
+/* chef end */
+/* client */
+.client{
+    margin: 50px auto;
+}
+.client ul,.client-header{
+    display: flex;
+    align-items: center;
+    color:var(--hex-red);
+}
+.client-header img{
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+}
+.client-header h6{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.client-body{
+    margin-left: 20%;
+    padding: 10px;
+}
+.client-footer{
+    text-align: right;
+    color: rgba(61,17,0,0.75);
+}
+/* client end */
+/* contact */
+.contact{
+    background-color: #fafafa;
+}
+.contact .wrap{
+    display: flex;
+    align-items: center;
+    padding-bottom:50px;
+}
+.contact-map img{
+    width: 460px;
+}
+.map-Img{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map@2x.png);
+    background-position: center center;
+    background-size: cover;
+    width: 460px;
+    height: 368px;
+}
+.contact-form{
+    width: 50%;
+    padding: 20px;
+}
+.contact label,.input-radio h6{
+    font-size: 14px;
+    display: block;
+    color:var(--hex-red);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.input-radio label{
+    display: inline;
+}
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form input[type="number"],
+.login-form input[type="text"],
+.login-form input[type="password"],
+.register input[type="text"],
+.register input[type="password"]
+{
+    width: 100%;
+    height: 32px;
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    padding: 6px;
+}
+.input-btn{
+    text-align: right;
+}
+.input-btn input[type="submit"],
+.input-btn input[type="reset"]{
+    color:var(--white);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    background-color: #cccccc;
+    border:0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.input-btn input[type="submit"]{
+    background-color: var(--orange);
+}
+.input-btn input[type="submit"]:hover{
+    background-color: var(--white);
+    color:var(--orange);
+    border: 2px solid var(--orange);
+}
+/* contact end*/
+/* cart */
+.cart{
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+}
+.cart-main{
+    width: 25%;
+    margin-right: 20px;
+}
+.cart-main h3{
+    font-size: 20px;
+    color:var(--hex-red);
+    margin-bottom: 20px;
+}
+.cart-main li a{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid var(--hex-red);
+    text-decoration: none;
+    color:var(--hex-red);
+}
+.cart-main li a:hover,.cart-main li a.active{
+    background-color: var(--hex-red);
+    color:var(--white);
+}
+.cart-commodity{
+    width: 75%;
+}
+.cart-topmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.seach-group{
+    position: relative;
+}
+.seach-group input[type="search"]{
+    height: 32px;
+    width: 460px;
+    border: 3px solid var(--hex-red);
+    padding: 10px;
+}
+.btn-search{
+    position: absolute;
+    right:0;
+    width: 36px;
+    height: 32px;
+    background-color: var(--hex-red);
+    color:var(--white);
+    cursor: pointer;
+    border: 0
+}
+.btn-cart .fa-shopping-cart{
+    color: var(--hex-red);
+    font-size: 30px;
+}
+.cart-icon a{
+    text-decoration: none;
+    color:var(--hex-red);
+    border-right: 1px solid var(--hex-red);
+    padding-right:20px; 
+}
+.btn-cart{
+    position: relative;
+    border: 0;
+    cursor: pointer;
+}
+.cart-number{
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--orange);
+    color:var(--white);
+    border-radius: 50%;
+}
+.product{
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    color:var(--hex-red);
+    width: 32.5%;
+    margin-top:10px;
+    margin-bottom:30px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px var(--block);
+}
+.product-header{
+    position: relative;
+    overflow: hidden;
+}
+.product-header img{
+    transition-duration: 1s;
+}
+.product-header img:hover{
+    transform: scale(1.3);
+}
+.product-img-title .fa-heart,.product-hot{
+    position: absolute;
+}
+.product-hot{
+    top: 18%;
+    right: -84px; 
+    font-size: 16px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--white);
+    transform: rotate(-315deg);
+    background-color: var(--cyan);
+}
+.product-img-title .fa-heart{
+    top:10px;
+    left:10px;
+    font-size: 20px;
+    color:var(--white);
+    transition:all 0.3s;
+}
+.product-img-title .fa-heart:hover{
+    color: var(--orange);
+}
+.product-body{
+    padding: 5px;
+}
+.product h3{
+    font-size: 20px;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+.product p{
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+.product-money{
+    border-top: 1px solid var(--hex-red);
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    width: 50%;
+}
+.product-footer{
+    padding:10px;
+}
+.product-footer a{
+    display: inline-block;
+    line-height: 28px;
+    width: 200px;
+    border:2px solid var(--orange);
+    color:var(--orange);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.8s;
+}
+.product-footer a:hover{
+    letter-spacing: 4px;
+    background-color: var(--hex-red);
+    border:2px solid var(--hex-red);
+    color:var(--white);
+}
+/* cart end */
+/*Login*/
+.login{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-img{
+    background-image: url(https://hsiangfeng.github.io/Restaurant/img/logo_l@svg.svg);
+    background-position: center;
+    background-size: cover;
+    width: 240px;
+    height: 48px;
+}
+.login-form{
+    width: 300px;
+    box-shadow: 1px 1px 10px var(--block);
+    
+}
+.form-header{
+    border-top: 3px solid var(--orange);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:var(--hex-red);
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.form-groud{
+    padding: 10px;
+}
+.login-form label,.register label{
+    font-size: 16px;
+    color:var(--hex-red);
+}
+.form-groud input[type="text"]{
+    margin-bottom: 15px;
+    padding-left:40px;
+}
+.form-groud input[type="password"]{
+    padding-left:40px;
+}
+.form-account,
+.form-password,
+.register-account,
+.register-password,
+.register-re-password{
+    position: relative;
+}
+.form-groud .fa-envelope,
+.form-groud-input .fa-envelope{
+    position: absolute;
+    top: 39%;
+    left: 10px;
+}
+.form-groud .fa-key,
+.form-groud-input .fa-key{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+.login-text{
+    margin-top:10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color:var(--hex-red);
+}
+.forget,.login-btn{
+    font-size: 14px;
+    color:var(--orange);
+    text-decoration: none;
+}
+.form-btn{
+    display: flex;
+    justify-content: end;
+    margin-top:20px;
+}
+.login-form .login-btn,.register .register-btn{
+    width: 125px;
+    height: 32px;
+    background-color: var(--orange);
+    color:var(--white);
+    border:0;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+.login-form .register-btn{
+    display: inline-block;
+    background-color: var(--gray);
+    color: var(--white);
+    text-align: center;
+    width: 125px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+.login-form .register-btn:hover{
+    border: 1px solid var(--orange);
+    background-color: #EFE9E7;
+    color:var(--orange);
+}
+.login-form .login-btn:hover,.register .register-btn:hover{
+    border: 1px solid var(--hex-red);
+    background-color: var(--hex-red);
+    color:var(--white);
+}
+.register{
+    max-width: 620px;
+    box-shadow: 1px 1px 10px var(--block);
+}
+.register .form-groud{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+.form-contract,.form-groud-input{
+    width: 50%;
+}
+.form-contract{
+    color:var(--hex-red);
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px;
+}
+.form-groud-input{
+    padding: 10px;
+}
+/*Login end*/
+/* media */
+@media(max-width:768px){
+    .wrap{
+        padding:0 15px;
+    }
+    .banner{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_desktop.png)
+    }
+    .banner-text{
+        left:21%;
+    }
+    .m-menu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 60px;
+    }
+    .topmain .main li a{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .topmain .main li a:focus{
+        background-color: var(--hex-red);
+        color:var(--white);
+    }
+    .topmain-content .main{
+        position: absolute;
+        top:50px;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .topmain .main li{
+        display: block;
+        background-color: rgba(var(--rgba-block-75));
+        padding-right: 0;
+    }
+    .btn-search{
+        width: 44px;
+    }
+    .feature-img-1{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_1.png);
+    }
+    .feature-img-2{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_2.png);
+    }
+    .feature-img-3{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/feature_3.png);
+    }
+    .map-Img{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/Map.png);
+        width: 363px;
+        height: 386px;
+    }
+    .product-footer a,.login-form .login-btn,
+     .register .register-btn,.login-form .register-btn{
+        height: 44px;
+        line-height: 44px;
+    }
+    .cart-main li a{
+        line-height: 24px;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"],
+    .contact-form input[type="email"],
+    .contact-form input[type="number"],
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .register input[type="text"],
+    .register input[type="password"],
+    .input-btn input[type="submit"], 
+    .input-btn input[type="reset"],
+    .seach-group input[type="search"],
+    .btn-search,
+    .cart-main li a{
+        height: 44px;
+    }
+    .chefImg{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/main_chef_brown.png);
+    }
+    .open .topmain-content,.topmain .main li{
+        background-color: var(--block);
+    }
+    .footer .about, .footer .connection{
+        width: 31.33333%;
+    }
+    .seach-group input[type="search"]{
+        width:331px;
+    }
+    .contact-form input[type="text"]:focus,
+    .contact-form input[type="tel"]:focus,
+    .contact-form input[type="email"]:focus,
+    .contact-form input[type="number"]:focus,
+    .login-form input[type="text"]:focus,
+    .login-form input[type="password"]:focus,
+    .register input[type="text"]:focus,
+    .register input[type="password"]:focus,
+    .input-btn input[type="submit"]:focus, 
+    .input-btn input[type="reset"]:focus,
+    .seach-group input[type="search"]:focus,
+    .seach-group input[type="search"]:focus{
+        box-shadow: 0px 0px  10px var(--blue);
+    }
+    .product-img-title .fa-heart{
+        font-size: 44px;;
+    }
+    .product{
+        width:47.5%;
+    }
+}
+@media(max-width:576px){
+    .banner{
+        background-image: url(https://hsiangfeng.github.io/Restaurant/img/header_mobile.png)
+    }
+    .banner-text{
+        left:11%;
+        text-align: center;
+    }
+    .secret ul{
+        text-align: center;
+    }
+    .banner-text br{
+        display: block;
+    }
+    .secret ul li,.contact-map img,.contact-form,
+    .chefImg,.chefResume,.footer .about, .footer .connection
+    ,.cart-main,.cart-commodity,.product,
+    .product-footer a,.form-contract, .form-groud-input{
+        width: 100%;
+    }
+    .chef-content{
+        height: 100%;
+    }
+    .chefImg{
+        height: 460px;
+    }
+    .client ul,.contact .wrap,
+    .chef-content,.secret ul,.footer .wrap,
+    .cart,.register .form-groud
+    {
+        display: block;
+    }
+    .footer .wrap,.cart-commodity,.cart-main{
+        margin-top:50px;
+    }
+    .cart-topmain{
+        margin-bottom: 20px;
+    }
+    .footer .about, .footer .connection{
+        max-width: 100%;
+    }
+    .footer .connection ul{
+        padding:20px;
+    }
+    .map-Img{
+        width: 100%;
+    }
+    .cart-main li a{
+        line-height: 24px;
+    }
+    .product-hot{
+        right:-216px;
+        height: 44px;
+        font-size: 24px;
+    }
+    
+}
+@media(max-width:376px){
+    .wrap{
+        padding: 0 0;
+    }
+    .banner-text{
+        left: 0;
+        width: 100%;
+    }
+    .banner-text{
+        left: 0;
+        right: 0;
+    }
+    .banner-text h3{
+        text-align: center;
+    }
+    .secret-h2, .client-h2, .contact-h2{
+        margin: 0 auto;
+        width: 80%;
+        display: block;
+    }
+    .secret-h2::after, .client-h2::after, .contact-h2::after,
+    .secret-h2::before, .client-h2::before, .contact-h2::before{
+        display: none;
+    }
+    .product-hot{
+        right: -144px;
+        height: 39px;
+        font-size: 20px;
+    }
+    .cart-topmain{
+        display: block;
+    }
+    .cart-icon{
+        margin:20px 0;
+        text-align: right;
+    }
+}
